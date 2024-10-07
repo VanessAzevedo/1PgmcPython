@@ -1,8 +1,0 @@
-html
-c
-c#
-pascal
-java
-rust - voltada para segurança de dados.
-php
-typeScript
