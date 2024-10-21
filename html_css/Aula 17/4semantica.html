@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - TAGS SEMÂNTICAS</title>
+
+    <style>
+        .topnav{
+            background-color:saddlebrown;
+            overflow: hidden;
+            height: 50px;
+            /*esse é o modo que se comenta dentro de CSS*/
+        }
+
+        .topnav a{
+            float: left;
+            color: white;
+            text-align: center;
+            text-decoration:none;
+            padding: 16px 16px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav a:hover{
+            background-color: rgb(126, 55, 5);
+            color:bisque;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .topnav a.active{
+            background-color: rgb(129, 61, 13);
+            color:bisque;
+        }
+    </style>
+</head>
+<body>
+    <nav class="topnav">
+        <a class="active" href="#">HOME</a>
+        <a href="#">CADASTRO</a>
+        <a href="#">SOBRE NÓS</a>
+    </nav>
+
+    <section>
+        <h1>Exemplo de Tag section</h1>
+        <p> Este é o primeiro exemplo da tag semântica section</p>
+    </section>
+
+    <div>
+        <h1>Exemplo de Tag div</h1>
+        <p> Este é um exemplo de uso da tag div como container de design</p>
+    </div>
+
+    <article>
+        <h1>Exemplo de Tag article</h1>
+            <p> Este é o primeiro exemplo da tag semântica <article></article></p>
+    </article>
+
+    <article>
+        <header>
+            <h1>Vanessa Azevedo</h1>
+            <p>123 da Silva 4</p>
+        </header>
+        <p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+        </p>
+    </article>
+
+    <footer>
+        <p>Este é o rodapé do site</p>
+    </footer>
+</body>
+</html>
+<!--todas essas semântica precisam serem formatadas com css-->
