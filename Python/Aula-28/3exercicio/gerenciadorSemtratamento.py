@@ -5,21 +5,16 @@ from funcionarios import Funcionario
 funcionarios = []
 
 # Função para carregar funcionários de um arquivo JSON
-def carregar_dados(arquivo="funcionarios.json"):
-    try:
-        with open(arquivo, "r") as file:
-            dados = json.load(file)
-            for item in dados:
-                funcionario = Funcionario(item["nome"], item["idade"], item["cargo"])
-                funcionarios.append(funcionario)
-        print("Dados carregados com sucesso!")
-    except FileNotFoundError:
-        print("Arquivo não encontrado. Nenhum dado carregado.")
-    except json.JSONDecodeError:
-        print("Erro ao ler o arquivo. Nenhum dado carregado.")
-
+def carregar_dados(arquivo="dados.json"):
+    with open(arquivo, "r") as file:
+        dados = json.load(file)
+        for item in dados:
+            funcionario = Funcionario(item["nome"], item["idade"], item["cargo"])
+            funcionarios.append(funcionario)
+    print("Dados carregados com sucesso!")
+ 
 # Função para salvar funcionários em um arquivo JSON
-def salvar_dados(arquivo="funcionarios.json"):
+def salvar_dados(arquivo="dados.json"):
     with open(arquivo, "w") as file:
         dados = [{"nome": f.nome, "idade": f.idade, "cargo": f.cargo} for f in funcionarios]
         json.dump(dados, file, indent=4)
