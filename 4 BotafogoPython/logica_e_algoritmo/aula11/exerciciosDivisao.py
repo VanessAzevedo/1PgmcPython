@@ -12,3 +12,5 @@ while resposta == 'S':
 
     # if resposta == 'N': (teoricamente tosco)
     #     break
+    
+
